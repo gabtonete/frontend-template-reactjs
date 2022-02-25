@@ -1,0 +1,118 @@
+.container-header {
+  .logo {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 25%;
+    border: solid 1px lightgray;
+    margin-top: 8px;
+  }
+
+  .navbar-mobile {
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    border-bottom: solid 1px lightgray;
+    border-top: solid 1px lightgray;
+    width: 90%;
+    justify-content: center;
+  }
+
+  .header-desktop {
+    display: none;
+  }
+
+  @media screen and (min-width: 992px) {
+    .header-mobile {
+      display: none;
+    }
+
+    .navbar-mobile {
+      display: none;
+    }
+
+    .header-desktop {
+      display: flex;
+      flex-direction: column;
+
+      .header-top {
+        display: flex;
+        flex-direction: row;
+        padding: 15px 250px;
+        border-bottom: solid 1px lightgrey;
+        justify-content: center;
+        margin-left: auto;
+        margin-right: auto;
+        width: -webkit-fill-available;
+
+        div {
+          display: flex;
+          flex-direction: row;
+
+          .span-telephone {
+            img {
+              width: 14px;
+            }
+
+            span {
+              padding-left: 5px;
+            }
+          }
+
+          .span-email {
+            img {
+              width: 14px;
+            }
+
+            padding-left: 20px;
+
+            span {
+              padding-left: 5px;
+            }
+          }
+        }
+        
+        .div-socials {
+          margin-right: 50%;
+          margin-left: 5px;
+
+          img {
+            cursor: pointer;
+            margin-left: 8px;
+            width: 15px;
+          }
+        }
+
+        .div-login {
+          flex-wrap: nowrap;
+
+          span {
+            cursor: pointer;
+            font-weight: bold;
+            margin-left: 25px;
+          }
+        }
+      }
+
+      .header-navbar {
+        justify-content: center;
+        display: flex;
+        flex-direction: row;
+        margin-top: 30px;
+        padding-left: 250px;
+
+        .logo {
+          width: 100px;
+          margin-left: 0px;
+          background-color: darkgrey;
+          margin-top: 0;
+        }
+
+        .navbar-desktop {
+          margin-right: 150px;
+          margin-left: 70px;
+        }
+      }
+    }
+  }
+}
