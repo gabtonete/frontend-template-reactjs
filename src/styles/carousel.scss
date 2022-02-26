@@ -1,0 +1,18 @@
+.container-carousel {
+  margin: 15px 10px 0px;
+
+  .carousel-caption {
+    display: none;
+  }
+
+  @media screen and (min-width: 992px) {
+
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    .carousel-caption {
+        display: block
+    }
+
+  }
+}

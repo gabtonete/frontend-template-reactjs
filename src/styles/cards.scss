@@ -1,0 +1,43 @@
+.container-cards {
+  margin-top: 50px;
+  padding-bottom: 30px;
+  border-bottom: solid 1px lightgray;
+
+  .card {
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+
+    .card-title {
+      display: flex;
+      flex-direction: row;
+
+      img {
+        margin-left: 7px;
+        margin-bottom: 4px;
+      }
+    }
+  }
+
+  .btn.btn-outline-secondary:focus {
+    box-shadow: none;
+  }
+
+  @media screen and (min-width: 992px) {
+    display: flex;
+    flex-direction: row;
+    margin-left: auto;
+    margin-right: auto;
+    
+    .container-card {
+      display: flex;
+      flex-direction: row;
+      margin-left: auto;
+      margin-right: auto;
+
+      .card {
+        margin: 0 15px 0 15px;
+      }
+    }
+  }
+}

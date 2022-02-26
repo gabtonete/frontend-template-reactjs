@@ -1,0 +1,24 @@
+.container-footer {
+
+    margin-top: 12px;
+
+    .div-contact {
+        display: flex;
+        flex-direction: column;
+        padding: 0 40px;
+
+        a{
+            margin-left: 4px;
+        }   
+
+        .social {
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 3px;
+        }
+    }
+
+    @media screen and (min-width: 992px) {
+        display: none;
+    }
+}

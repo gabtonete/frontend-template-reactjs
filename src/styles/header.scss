@@ -1,15 +1,34 @@
 .container-header {
+  .header-mobile {
+    .div-login {
+      margin-top: 15px;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+
+      span {
+        border-left: solid 1px black;
+        border-right: solid 1px black;
+      }
+
+      div {
+        font-weight: bold;
+        font-size: 18px;
+      }
+    }
+  }
+
   .logo {
     display: block;
     margin-left: auto;
     margin-right: auto;
     width: 25%;
-    border: solid 1px lightgray;
     margin-top: 8px;
   }
 
   .navbar-mobile {
     display: flex;
+    margin-top: 10px;
     margin-left: auto;
     margin-right: auto;
     border-bottom: solid 1px lightgray;
@@ -17,11 +36,12 @@
     width: 90%;
     justify-content: center;
   }
-
+  
   .header-desktop {
     display: none;
   }
 
+  
   @media screen and (min-width: 992px) {
     .header-mobile {
       display: none;
@@ -95,22 +115,29 @@
       }
 
       .header-navbar {
-        justify-content: center;
         display: flex;
         flex-direction: row;
-        margin-top: 30px;
-        padding-left: 250px;
+        padding: 30px;
+        margin-left: auto;
+        margin-right: auto;
 
         .logo {
           width: 100px;
-          margin-left: 0px;
-          background-color: darkgrey;
+          height: 100px;
           margin-top: 0;
+          margin-left: 0;
         }
 
         .navbar-desktop {
-          margin-right: 150px;
           margin-left: 70px;
+
+          .nav-item.dropdown {
+            margin-right: 10px;
+
+            a:hover {
+              color: black;
+            }
+          }
         }
       }
     }

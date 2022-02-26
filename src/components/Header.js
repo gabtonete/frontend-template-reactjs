@@ -13,13 +13,18 @@ import { Navbar, Nav, NavLink, NavDropdown, Modal, Button } from "react-bootstra
 import '../styles/header.scss'
 import '../styles/modal.scss'
 
-export const Header = props => {
+export const Header = () => {
 
     let [showModal, setShowModal] = useState(false);
 
     return (
         <div className="container-header">
             <div className="header-mobile">
+                <div className="div-login">
+                    <div onClick={setShowModal}>Signin</div>
+                    <span></span>
+                    <div>Signup</div>
+                </div>
                 <img className="logo" src={logo} alt="logo-site" />
                 <Navbar>
                     <Nav className="navbar-mobile">
@@ -44,6 +49,9 @@ export const Header = props => {
                         </div>
                     </div>
                     <div className="div-socials">
+                        <a href="http://github.com/gabtonete" target='blank'>
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="github" />
+                        </a>
                         <a href="http://facebook.com" target='blank'>
                             <img src={facebook} alt="Facebook" width="20" />
                         </a>
@@ -62,7 +70,7 @@ export const Header = props => {
                 <div className="header-navbar">
                     <img className="logo" src={logo} alt="logo-site" />
                     <Navbar className="navbar-desktop">
-                        <NavDropdown title="DROPDOWN 1"
+                        <NavDropdown title="DROPDOWN"
                             id="collasible-nav-dropdown"
                             renderMenuOnMount={true}
                         >
