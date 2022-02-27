@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 
+import {NavbarComponent} from '../components/NavbarComponent';
+
 import facebook from "../assets/icons/facebook.svg";
 import instagram from "../assets/icons/instagram.svg";
 import twitter from "../assets/icons/twitter.svg";
@@ -8,22 +10,24 @@ import telephone from "../assets/icons/telephone.svg";
 import email from "../assets/icons/email.svg";
 import login from "../assets/icons/login.svg";
 import lock from "../assets/icons/lock.svg";
+import avatar from "../assets/icons/avatar.svg";
 
-import { Navbar, Nav, NavLink, NavDropdown, Modal, Button } from "react-bootstrap";
+import { Navbar, Nav, NavLink, Modal, Button } from "react-bootstrap";
 import '../styles/header.scss'
 import '../styles/modal.scss'
 
 export const Header = () => {
 
-    let [showModal, setShowModal] = useState(false);
+    let [showModalLogin, setShowModalLogin] = useState(false);
+    let [showModalRegister, setShowModalRegister] = useState(false);
 
     return (
         <div className="container-header">
             <div className="header-mobile">
                 <div className="div-login">
-                    <div onClick={setShowModal}>Signin</div>
+                    <div onClick={setShowModalLogin}>Signin</div>
                     <span></span>
-                    <div>Signup</div>
+                    <div onClick={setShowModalRegister}>Signup</div>
                 </div>
                 <img className="logo" src={logo} alt="logo-site" />
                 <Navbar>
@@ -49,7 +53,7 @@ export const Header = () => {
                         </div>
                     </div>
                     <div className="div-socials">
-                        <a href="http://github.com/gabtonete" target='blank'>
+                        <a href="https://github.com/gabtonete/frontend-template-reactjs" target='blank'>
                             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="github" />
                         </a>
                         <a href="http://facebook.com" target='blank'>
@@ -63,59 +67,44 @@ export const Header = () => {
                         </a>
                     </div>
                     <div className="div-login">
-                        <span onClick={setShowModal}>Login</span>
-                        <span>Register</span>
+                        <span onClick={setShowModalLogin}>Login</span>
+                        <span onClick={setShowModalRegister}>Register</span>
                     </div>
                 </div>
                 <div className="header-navbar">
                     <img className="logo" src={logo} alt="logo-site" />
-                    <Navbar className="navbar-desktop">
-                        <NavDropdown title="DROPDOWN"
-                            id="collasible-nav-dropdown"
-                            renderMenuOnMount={true}
-                        >
-                            <NavDropdown.Item href="#action3">OPTION 1</NavDropdown.Item>
-                            <NavDropdown.Item href="#action4">OPTION 2</NavDropdown.Item>
-                            <NavDropdown.Item href="#action4">OPTION 3</NavDropdown.Item>
-                        </NavDropdown>
-                        <NavDropdown title="HOME"
-                            id="collasible-nav-dropdown"
-                            renderMenuOnMount={true}
-                        >
-                            <NavDropdown.Item href="#action3">OPTION 1</NavDropdown.Item>
-                            <NavDropdown.Item href="#action4">OPTION 2</NavDropdown.Item>
-                            <NavDropdown.Item href="#action4">OPTION 3</NavDropdown.Item>
-                        </NavDropdown>
-                        <NavDropdown title="SERVICES"
-                            id="collasible-nav-dropdown"
-                            renderMenuOnMount={true}
-                        >
-                            <NavDropdown.Item href="#action3">OPTION 1</NavDropdown.Item>
-                            <NavDropdown.Item href="#action4">OPTION 2</NavDropdown.Item>
-                            <NavDropdown.Item href="#action4">OPTION 3</NavDropdown.Item>
-                        </NavDropdown>
-                        <NavDropdown title="ABOUT"
-                            id="collasible-nav-dropdown"
-                            renderMenuOnMount={true}
-                        >
-                            <NavDropdown.Item href="#action3">OPTION 1</NavDropdown.Item>
-                            <NavDropdown.Item href="#action4">OPTION 2</NavDropdown.Item>
-                            <NavDropdown.Item href="#action4">OPTION 3</NavDropdown.Item>
-                        </NavDropdown>
-                        <NavDropdown title="CONTACT"
-                            id="collasible-nav-dropdown"
-                            renderMenuOnMount={true}
-                        >
-                            <NavDropdown.Item href="#action3">OPTION 1</NavDropdown.Item>
-                            <NavDropdown.Item href="#action4">OPTION 2</NavDropdown.Item>
-                            <NavDropdown.Item href="#action4">OPTION 3</NavDropdown.Item>
-                        </NavDropdown>
-                    </Navbar>
+                    <div className="navbar">
+                       <NavbarComponent 
+                            text="HOME"
+                            option1="PROFILE"
+                            option2="ABOUT US"
+                            option3="PORTAL"
+                        />
+                        <NavbarComponent 
+                            text="SERVICES"
+                            option1="COURSES"
+                            option2="METHODS"
+                            option3="KNOWLEDGE"
+                        />
+                        <NavbarComponent 
+                            text="COFFEE"
+                            option1="IS GOOD"
+                            option2="IS NICE"
+                            option3="IS HOT"
+                        />
+                        <NavbarComponent 
+                            text="PRODUCTS"
+                            option1="PENCILS"
+                            option2="BOOKS"
+                            option3="DUNNO"
+                        />
+                    </div>
+
                 </div>
             </div>
             <Modal
-                show={showModal}
-                onHide={() => setShowModal(false)}
+                show={showModalLogin}
+                onHide={() => setShowModalLogin(false)}
                 size="sm"
                 dialogClassName="modal-90h"
             >
@@ -133,8 +122,36 @@ export const Header = () => {
                     </span>
                 </Modal.Body>
                 <Modal.Footer>
-                    <Button variant="secondary" onClick={() => setShowModal(false)}>Close</Button>
-                    <Button variant="primary">Login</Button>
+                    <Button variant="secondary" onClick={() => setShowModalLogin(false)}>Close</Button>
+                    <Button variant="primary" onClick={() => setShowModalLogin(false)}>Login</Button>
+                </Modal.Footer>
+            </Modal>
+            <Modal
+                show={showModalRegister}
+                onHide={() => setShowModalRegister(false)}
+                size="sm"
+                dialogClassName="modal-90h"
+            >
+                <Modal.Header closeButton>
+                    <Modal.Title>Register</Modal.Title>
+                </Modal.Header>
+                <Modal.Body>
+                <span className="name-span">
+                        <img src={avatar} alt="Campo de nome" width="30" />
+                        <input type="text" placeholder="Nome"></input>
+                    </span>
+                    <span className="login-span">
+                        <img src={login} alt="Campo de login" width="25" />
+                        <input type="text" placeholder="E-mail"></input>
+                    </span>
+                    <span className="password-span">
+                        <img src={lock} alt="Campo de senha" width="30" />
+                        <input type="password" placeholder="Password"></input>
+                    </span>
+                </Modal.Body>
+                <Modal.Footer>
+                    <Button variant="secondary" onClick={() => setShowModalRegister(false)}>Close</Button>
+                    <Button variant="primary" onClick={() => setShowModalRegister(false)}>Login</Button>
                 </Modal.Footer>
             </Modal>
         </div>

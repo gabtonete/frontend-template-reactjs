@@ -13,7 +13,7 @@ export const Footer = () => {
         <div className="container-footer">
             <div className="div-contact">
                 <div id="socials" className="social">
-                    <a href="http://github.com/gabtonete" target='blank'>
+                    <a href="https://github.com/gabtonete/frontend-template-reactjs" target='blank'>
                         <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="github" width="20" />
                     </a>
                     <a href="http://facebook.com" target='blank'>
