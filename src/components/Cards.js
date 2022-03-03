@@ -9,7 +9,7 @@ export const Cards = () => {
   return (
     <div className="container-cards">
       <div className="container-card">
-      <Card style={{ width: '14rem' }}>
+      <Card>
         <Card.Body>
           <div className="card-title">
             <Card.Title>Products</Card.Title>
@@ -22,7 +22,7 @@ export const Cards = () => {
           <Button variant="outline-secondary">Buy a product</Button>
         </Card.Body>
       </Card>
-      <Card style={{ width: '14rem' }}>
+      <Card>
         <Card.Body>
           <div className="card-title">
             <Card.Title>Coffee</Card.Title>
@@ -35,7 +35,7 @@ export const Cards = () => {
           <Button variant="outline-secondary">Drink some coffee</Button>
         </Card.Body>
       </Card>
-      <Card style={{ width: '14rem' }}>
+      <Card>
         <Card.Body>
           <div className="card-title">
             <Card.Title>Eat chocolate</Card.Title>
@@ -48,7 +48,7 @@ export const Cards = () => {
           <Button variant="outline-secondary">Wanna some snickers?</Button>
         </Card.Body>
       </Card>
-      <Card style={{ width: '14rem' }}>
+      <Card>
         <Card.Body>
           <div className="card-title">
             <Card.Title>Keep calm</Card.Title>

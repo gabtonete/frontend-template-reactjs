@@ -2,15 +2,15 @@
   display: flex;
   flex-direction: column;
 
-  img, input {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+  span{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 25px;
+    justify-content: space-evenly;
   }
-
+  
   input {
-    height: 40px;
-    width: 92%;
+    width: 80%;
     border: none;
     border-bottom: solid 1px lightgrey;
 
@@ -18,15 +18,5 @@
       border: none;
       outline: none;
     }
-  }
-
-  img {
-    margin-bottom: 5px;
-  }
-
-  span{
-    margin-bottom: 25px;
-  }
-  
-  
+  } 
 }

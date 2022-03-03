@@ -1,4 +1,20 @@
 .container-header {
+  .logged {
+    font-weight: bold;
+    margin-top: 18px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    text-align: center;
+    align-items: center;
+
+    .logout {
+      img {
+        margin-left: 5px;
+      }
+    }
+  }
+
   .header-mobile {
     .div-login {
       margin-top: 15px;
@@ -68,102 +84,123 @@
           display: flex;
           flex-direction: row;
 
-          .span-telephone {
-            img {
-              width: 14px;
-            }
-
-            span {
-              padding-left: 5px;
-            }
-          }
-
-          .span-email {
-            img {
-              width: 14px;
-            }
-
-            padding-left: 20px;
-
-            span {
-              padding-left: 5px;
-            }
+          span {
+            display: flex;
+            flex-direction: row;
           }
         }
 
-        .div-socials {
-          margin-right: 50%;
-          margin-left: 5px;
-
+        .span-telephone {
           img {
-            cursor: pointer;
-            margin-left: 8px;
-            width: 15px;
+            width: 14px;
           }
-        }
-
-        .div-login {
-          flex-wrap: nowrap;
 
           span {
-            cursor: pointer;
-            font-weight: bold;
-            margin-left: 25px;
+            padding-left: 5px;
+          }
+        }
+
+        .span-email {
+          img {
+            width: 14px;
+          }
+
+          padding-left: 20px;
+
+          span {
+            padding-left: 5px;
           }
         }
       }
+    }
 
-      .header-navbar {
-        display: flex;
-        flex-direction: row;
-        padding: 30px;
-        margin-left: auto;
-        margin-right: auto;
+    .div-socials {
+      margin-right: 50%;
+      margin-left: 5px;
 
-        .logo {
-          width: 100px;
-          height: 100px;
-          margin-top: 0;
-          margin-left: 0;
+      img {
+        cursor: pointer;
+        margin-left: 8px;
+        width: 15px;
+      }
+    }
+
+    .logged-desktop {
+      font-weight: bold;
+      margin-left: 25px;
+
+      .logout {
+        cursor: pointer;
+        
+        img {
+          margin-left: 5px;
+        }
+      }
+
+      .name-display {
+        
+        margin-right: 25px;
+      }
+    }
+
+    .div-login {
+      span {
+        cursor: pointer;
+        font-weight: bold;
+        margin-left: 25px;
+      }
+    }
+
+    .header-navbar {
+      display: flex;
+      flex-direction: row;
+      padding: 30px;
+      margin-left: auto;
+      margin-right: auto;
+
+      .logo {
+        width: 100px;
+        height: 100px;
+        margin-top: 0;
+        margin-left: 0;
+      }
+
+      .navbar {
+        width: 640px;
+        margin-left: 70px;
+
+        .dropdown-button {
+          width: 160px;
+          text-align: center;
+          font-size: 1.4em;
         }
 
-        .navbar {
-          width: 640px;
-          margin-left: 70px;  
+        .dropdown-menu {
+          align-items: center;
+          display: flex;
+          flex-direction: column;
+          height: 0px;
+          visibility: hidden;
+          transition: all 0.2s;
+          transition-timing-function: ease-in-out;
 
-          .dropdown-button {
-            width: 160px;
-            text-align: center;
-            font-size: 1.4em;
+          a {
+            font-size: 1.2em;
+            text-decoration: none;
+            margin-bottom: 6px;
+            color: transparent;
+            transition: 0.3s;
           }
+        }
 
+        .dropdown-button:hover {
           .dropdown-menu {
-            align-items: center;
-            display: flex;
-            flex-direction: column;
-            height: 0px;
-            visibility: hidden;
-            transition: all 0.2s;
-            transition-timing-function: ease-in-out; 
-          
-            a {
-              font-size: 1.2em;
-              text-decoration: none;
-              margin-bottom: 6px;
-              color: transparent;
-              transition: 0.3s;
-            }
+            height: 130px;
+            visibility: visible;
           }
 
-          .dropdown-button:hover {
-            .dropdown-menu {
-              height: 130px;
-              visibility: visible;
-            }
-
-            a{
-              color: black;
-            }
+          a {
+            color: black;
           }
         }
       }
