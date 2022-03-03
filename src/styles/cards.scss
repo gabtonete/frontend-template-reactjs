@@ -1,10 +1,10 @@
 .container-cards {
-  margin-top: 50px;
+  margin-top: 30px;
   padding-bottom: 30px;
   border-bottom: solid 1px lightgray;
 
   .card {
-    width: 90%;
+    width: 80%;
     margin-top: 20px;
     margin-left: auto;
     margin-right: auto;
@@ -33,11 +33,11 @@
     .container-card {
       display: flex;
       flex-direction: row;
-      margin-left: auto;
-      margin-right: auto;
+      margin: 0px 15%;
 
       .card {
-        margin: 0 15px 0 15px;
+        width: 25%;
+        margin: 0px 10px;
       }
     }
   }

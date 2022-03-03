@@ -123,7 +123,7 @@ export const Header = () => {
                             ?
                             <div className="logged-desktop">
                                 <div className="name-display">
-                                    <span>Welcome, {nameRegister}</span>
+                                    <span>Welcome,&nbsp;</span><span>{nameRegister}</span>
                                 </div>
                                 <div className="logout" onClick={logout}>
                                     <span>Logout</span>

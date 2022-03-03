@@ -89,33 +89,37 @@
             flex-direction: row;
           }
         }
+        .div-contact {
 
-        .span-telephone {
-          img {
-            width: 14px;
+          margin-left: 10px;
+          
+          .span-telephone {
+            img {
+              width: 14px;
+            }
+
+            span {
+              padding-left: 5px;
+            }
           }
 
-          span {
-            padding-left: 5px;
-          }
-        }
+          .span-email {
+            img {
+              width: 14px;
+            }
 
-        .span-email {
-          img {
-            width: 14px;
-          }
+            padding-left: 20px;
 
-          padding-left: 20px;
-
-          span {
-            padding-left: 5px;
+            span {
+              padding-left: 5px;
+            }
           }
         }
       }
     }
 
     .div-socials {
-      margin-right: 50%;
+      margin-right: auto;
       margin-left: 5px;
 
       img {
@@ -131,14 +135,13 @@
 
       .logout {
         cursor: pointer;
-        
+
         img {
           margin-left: 5px;
         }
       }
 
       .name-display {
-        
         margin-right: 25px;
       }
     }
@@ -154,7 +157,7 @@
     .header-navbar {
       display: flex;
       flex-direction: row;
-      padding: 30px;
+      padding: 15px 30px 0px;
       margin-left: auto;
       margin-right: auto;
 
