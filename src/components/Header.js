@@ -133,7 +133,7 @@ export const Header = () => {
                             :
                             <div className="div-login">
                                 <span onClick={setShowModalLogin}>Login</span>
-                                <span onClick={setShowModalRegister}>Register</span>
+                                <span className="registerButton" onClick={setShowModalRegister}>Register</span>
                             </div>
                     }
                 </div>
