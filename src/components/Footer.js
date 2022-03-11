@@ -13,16 +13,16 @@ export const Footer = () => {
         <div className="container-footer">
             <div className="div-contact">
                 <div id="socials" className="social">
-                    <a href="https://github.com/gabtonete/frontend-template-reactjs" target='blank'>
+                    <a href="https://github.com/gabtonete/frontend-template-reactjs" target='blank' rel="noopener noreferrer">
                         <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="github" width="20" />
                     </a>
-                    <a href="http://facebook.com" target='blank'>
+                    <a href="http://facebook.com" target='blank' rel="noopener noreferrer">
                         <img src={facebook} alt="Facebook" width="20" />
                     </a>
-                    <a href="http://instagram.com" target='blank'>
+                    <a href="http://instagram.com" target='blank' rel="noopener noreferrer">
                         <img src={instagram} alt="Instagram" width="20" />
                     </a>
-                    <a href="http://twitter.com" target='blank'>
+                    <a href="http://twitter.com" target='blank' rel="noopener noreferrer">
                         <img src={twitter} alt="Twitter" width="20" />
                     </a>
                 </div>
